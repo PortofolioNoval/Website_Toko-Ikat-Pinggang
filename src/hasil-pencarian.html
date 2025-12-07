@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Hasil Pencarian</title>
+<link rel="stylesheet" href="../style/produk.css">
+</head>
+<body>
+
+<h2 style="margin-left:320px;margin-top:40px">Hasil Pencarian</h2>
+<div class="products" id="searchResults"></div>
+
+<script src="../script/produk.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", ()=>{
+    const keyword = (localStorage.getItem("searchKeyword")||"").toLowerCase();
+    
+    const allCards = document.querySelectorAll(".card");
+    const container = document.getElementById("searchResults");
+    container.innerHTML = "";
+
+    allCards.forEach(card=>{
+        const name = card.querySelector("h3").textContent.toLowerCase();
+        if(name.includes(keyword)){
+            container.appendChild(card.cloneNode(true));
+        }
+    });
+
+    if(container.children.length === 0){
+        container.innerHTML = `<p style="color:#333;font-size:18px;text-align:center;width:100%;">Tidak ada produk ditemukan</p>`;
+    }
+});
+
+</script>
+
+</body>
+</html>

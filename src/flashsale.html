@@ -1,0 +1,191 @@
+<!-- Modern Sidebar UI for Belt E-commerce (Styled Sidebar Menu) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Belt Store</title>
+<link rel="stylesheet" href="../style/produk.css">
+</head>
+<body>
+
+<div class="sidebar" role="navigation" aria-label="Sidebar menu">
+    <div class="profile">
+        <div class="avatar">
+            <img src="../assets/logo.jpg" alt="logo">
+        </div>
+        <div class="meta">
+            <div class="name">VallBelt</div>
+            <div class="role">Welcome, shopper😉</div>
+        </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <nav class="menu">
+        <div class="menu-item" data-key="dashboard">
+            <!-- Home Icon -->
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 10.5L12 4l9 6.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1V10.5z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <a href="../index.html"><span>Dashboard</span></a>
+        </div>
+
+        <div class="menu-item" data-key="products">
+            <!-- Box Icon -->
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M21 16V8a2 2 0 0 0-1-1.73L13 2l-7 4.27A2 2 0 0 0 5 8v8a2 2 0 0 0 1 1.73L11 22l7-4.27A2 2 0 0 0 21 16z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <a href="../src/produk.html"><span>Produk</span></a>
+            <div class="badge">15</div>
+        </div>
+
+        <div class="menu-item" data-key="wishlist">
+            <!-- Heart Icon -->
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20.8 7.6a4.9 4.9 0 0 0-7-0.1L12 9l-1.8-1.5a4.9 4.9 0 1 0-6.9 7L12 21l9.8-6.4a4.9 4.9 0 0 0-.0-7z" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span>Wishlist</span>
+        </div>
+
+        <div class="menu-item" data-key="account">
+            <!-- User Icon -->
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 21v-1a4 4 0 0 0-3-3.87M7 20v-1a4 4 0 0 1 3-3.87M12 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span>Akun Saya</span>
+        </div>
+
+        <div class="menu-item" data-key="orders">
+            <!-- Package Icon -->
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M21 16V8a2 2 0 0 0-1-1.73L13 2l-7 4.27A2 2 0 0 0 5 8v8a2 2 0 0 0 1 1.73L11 22l7-4.27A2 2 0 0 0 21 16z" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span>Pesanan</span>
+        </div>
+
+        <div class="menu-item" data-key="support">
+            <!-- Help Icon -->
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zM12 17v.01M12 7a3 3 0 0 1 2 5c-.5.5-1 1-1 2" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <a href="../src/bantuan.html"><span>Bantuan</span></a>
+        </div>
+    </nav>
+
+    <div class="sidebar-footer">
+        <button class="action-btn" id="btn-logout">Logout</button>
+        <button class="action-btn" id="btn-settings">Settings</button>
+    </div>
+</div>
+
+<div class="content">
+    <div class="top-bar">
+        <input type="text" placeholder="Cari belt..." aria-label="Search belts" />
+        <div id="cart">🛒 <span id="cart-count">0</span></div>
+    </div>
+
+
+    <!-- <h2>Rekomendasi Belt</h2> -->
+    <h2 style="color: #1e1e2f;">⚡ Flash Sale</h2>
+    <div class="products">
+        <div class="card">
+            <img src="../barang/hugo.png" alt="Belt Kulit Premium" />
+            <h3>Hugo Boss Garney Leather Belt 80cm</h3>
+            <span class="diskon">Rp 535.000</span>
+            <p>Rp 479.000</p>
+            <button class="btn-primary" onclick="buyNow(this)">Beli Sekarang</button>
+        </div>
+        <div class="card">
+            <img src="../barang/prada.png" alt="Belt Jeans Hitam" />
+            <h3>Prada Re-Nylon Classic Belt 70cm</h3>
+            <span class="diskon">Rp 650.000</span>
+            <p>Rp 520.000</p>
+            <button class="btn-primary" onclick="buyNow(this)">Beli Sekarang</button>
+        </div>
+        <div class="card">
+            <img src="../barang/versece.png" alt="Belt Elegan Coklat" />
+            <h3>Versace Medusa Head Belt 95cm</h3>
+            <span class="diskon">Rp 470.000</span>
+            <p>Rp 400.000</p>
+            <button class="btn-primary" onclick="buyNow(this)">Beli Sekarang</button>
+        </div>
+        <div class="card">
+            <img src="../barang/saint laurent.png" alt="Belt Elegan Coklat" />
+            <h3>Saint Laurent Classic Leather Belt 55cm</h3>
+            <span class="diskon">Rp 935.000</span>
+            <p>Rp 730.000</p>
+            <button class="btn-primary" onclick="buyNow(this)">Beli Sekarang</button>
+        </div>
+        <div class="card">
+            <img src="../barang/luxury.png" alt="Belt Elegan Coklat" />
+            <h3>Hermès Constance Leather Belt 95cm</h3>
+            <span class="diskon">Rp 750.000</span>
+            <p>Rp 610.000</p>
+            <button class="btn-primary" onclick="buyNow(this)">Beli Sekarang</button>
+        </div>
+        <div class="card">
+            <img src="../barang/carhart.png" alt="Belt Elegan Coklat" />
+            <h3>Carhartt WIP Clip Belt Chrome 100cm</h3>
+            <span class="diskon">Rp 220.000</span>
+            <p>Rp 120.000</p>
+            <button class="btn-primary" onclick="buyNow(this)">Beli Sekarang</button>
+        </div>
+        <div class="card">
+            <img src="../barang/levis.png" alt="Belt Elegan Coklat" />
+            <h3>Levi’s Casual Leather Belt 100cm</h3>
+             <span class="diskon">Rp 200.000</span>
+            <p>Rp 120.000</p>
+            <button class="btn-primary" onclick="buyNow(this)">Beli Sekarang</button>
+        </div>
+        <div class="card">
+            <img src="../barang/nike.png" alt="Belt Elegan Coklat" />
+            <h3>Nike Essential Black Web Belt 100cm</h3>
+            <span class="diskon">Rp 280.000</span>
+            <p>Rp 200.000</p>
+            <button class="btn-primary" onclick="buyNow(this)">Beli Sekarang</button>
+        </div>
+        <div class="card">
+            <img src="../barang/dockers.png" alt="Belt Elegan Coklat" />
+            <h3>Adidas Originals Web Belt 100cm</h3>
+            <span class="diskon">Rp 245.000</span>
+            <p>Rp 150.000</p>
+            <button class="btn-primary" onclick="buyNow(this)">Beli Sekarang</button>
+        </div>
+    </div>
+    
+</div>
+
+
+<!-- MINI CART POPUP -->
+<div class="mini-cart" id="miniCart">
+    <h3>Keranjang</h3>
+    <div id="cartItems"></div>
+    <div class="mini-footer">
+        <div class="muted">Total: Rp <span id="totalPrice">0</span></div>
+        <div>
+            <button class="btn-primary" id="btnCheckout">Checkout</button>
+        </div>
+    </div>
+</div>
+
+
+<!-- CHECKOUT MODAL -->
+<div class="overlay" id="overlay">
+    <div class="checkout-modal" role="dialog" aria-modal="true" aria-labelledby="checkoutTitle">
+        <h3 id="checkoutTitle">Checkout</h3>
+        <div id="checkoutSummary" class="muted">Ringkasan pesanan akan muncul di sini.</div>
+        <form id="checkoutForm">
+            <div class="field"><input type="text" id="name" placeholder="Nama lengkap" required></div>
+            <div class="field"><input type="text" id="address" placeholder="Alamat lengkap" required></div>
+            <div class="field"><input type="text" id="phone" placeholder="Nomor HP" required></div>
+            <!-- tambahan metode pembayaran -->
+            <div class="field">
+                <select id="paymentMethod" required>
+                    <option value="Transfer Bank">Transfer Bank</option>
+                    <option value="COD (Bayar di Tempat)">COD (Bayar di Tempat)</option>
+                    <option value="E-Wallet">E-Wallet (Dana/Gopay/Ovo)</option>
+                </select>
+            </div>
+            <div class="field"><textarea id="note" placeholder="Catatan (opsional)"></textarea></div>
+            <div style="display:flex;gap:8px;justify-content:flex-end;margin-top:8px;">
+                <button type="button" class="btn-primary" id="confirmPay">Konfirmasi & Bayar</button>
+                <button type="button" class="btn-primary" id="cancelCheckout" style="background:#6b7280;">Batal</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script src="../script/produk.js"></script>
+<script src="../script/search.js"></script>
+
+</body>
+</html>
